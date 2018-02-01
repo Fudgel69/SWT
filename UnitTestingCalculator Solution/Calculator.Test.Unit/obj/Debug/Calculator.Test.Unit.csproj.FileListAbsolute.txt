@@ -1,0 +1,9 @@
+D:\SWT\UnitTestingCalculator Solution\Calculator.Test.Unit\bin\Debug\Calculator.Test.Unit.dll
+D:\SWT\UnitTestingCalculator Solution\Calculator.Test.Unit\bin\Debug\Calculator.Test.Unit.pdb
+D:\SWT\UnitTestingCalculator Solution\Calculator.Test.Unit\bin\Debug\Calculator.dll
+D:\SWT\UnitTestingCalculator Solution\Calculator.Test.Unit\bin\Debug\nunit.framework.dll
+D:\SWT\UnitTestingCalculator Solution\Calculator.Test.Unit\bin\Debug\Calculator.pdb
+D:\SWT\UnitTestingCalculator Solution\Calculator.Test.Unit\bin\Debug\nunit.framework.xml
+D:\SWT\UnitTestingCalculator Solution\Calculator.Test.Unit\obj\Debug\Calculator.Test.Unit.csprojResolveAssemblyReference.cache
+D:\SWT\UnitTestingCalculator Solution\Calculator.Test.Unit\obj\Debug\Calculator.Test.Unit.dll
+D:\SWT\UnitTestingCalculator Solution\Calculator.Test.Unit\obj\Debug\Calculator.Test.Unit.pdb

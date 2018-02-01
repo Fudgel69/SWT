@@ -1,0 +1,5 @@
+D:\SWT\UnitTestingCalculator Solution\Calculator\bin\Debug\Calculator.dll
+D:\SWT\UnitTestingCalculator Solution\Calculator\bin\Debug\Calculator.pdb
+D:\SWT\UnitTestingCalculator Solution\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+D:\SWT\UnitTestingCalculator Solution\Calculator\obj\Debug\Calculator.dll
+D:\SWT\UnitTestingCalculator Solution\Calculator\obj\Debug\Calculator.pdb
