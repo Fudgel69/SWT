@@ -1,2 +1,2 @@
-# SWD
-Public repository til softwaredesign
+# SWT
+Public repository til softwaretest
