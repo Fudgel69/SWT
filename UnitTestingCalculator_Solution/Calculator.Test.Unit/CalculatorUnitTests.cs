@@ -44,6 +44,7 @@ namespace Calculator.Test.Unit
         [TestCase(0, -2, 0)]
         [TestCase(-2, 0, 0)]
         [TestCase(0, 0, 0)]
+		[TestCase(2, 5, 10)]
         public void Multiply_MultiplyNunmbers_ResultIsCorrect(int a, int b, int result)
         {
             Assert.That(_uut.Multiply(a, b), Is.EqualTo(result));
