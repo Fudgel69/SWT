@@ -1,0 +1,6 @@
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy\bin\Debug\ECS.Legacy.exe.config
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy\bin\Debug\ECS.Legacy.exe
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy\bin\Debug\ECS.Legacy.pdb
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy\obj\Debug\ECS.Legacy.csprojResolveAssemblyReference.cache
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy\obj\Debug\ECS.Legacy.exe
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy\obj\Debug\ECS.Legacy.pdb
