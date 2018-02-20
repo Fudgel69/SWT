@@ -1,0 +1,10 @@
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\bin\Debug\ECS.Legacy.Test.Unit.dll
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\bin\Debug\ECS.Legacy.Test.Unit.pdb
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\bin\Debug\ECS.Legacy.exe
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\bin\Debug\nunit.framework.dll
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\bin\Debug\ECS.Legacy.pdb
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\bin\Debug\ECS.Legacy.exe.config
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\bin\Debug\nunit.framework.xml
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\obj\Debug\ECS.Legacy.Test.Unit.csprojResolveAssemblyReference.cache
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\obj\Debug\ECS.Legacy.Test.Unit.dll
+D:\SWT_Fudgel\ECS_Legacy\ECS.Legacy.Test.Unit\obj\Debug\ECS.Legacy.Test.Unit.pdb
