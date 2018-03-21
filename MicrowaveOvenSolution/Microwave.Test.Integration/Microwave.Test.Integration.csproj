@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="DisplayToOutput.cs" />
     <Compile Include="LightToOutput.cs" />
+    <Compile Include="PowerTubeToOutput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
