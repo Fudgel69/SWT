@@ -9,6 +9,8 @@ namespace MicrowaveOvenClasses.Boundary
 
         public event EventHandler Expired;
         public event EventHandler TimerTick;
+        
+        public System.Timers.Timer TIMER { get; }
 
         private System.Timers.Timer timer;
 

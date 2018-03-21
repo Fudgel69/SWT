@@ -13,6 +13,8 @@ namespace MicrowaveOvenClasses.Interfaces
         event EventHandler Expired;
         event EventHandler TimerTick;
 
+        System.Timers.Timer TIMER { get; }
+
         void Start(int time);
         void Stop();
     }

@@ -32,6 +32,7 @@ namespace Microwave.Test.Integration
             _cookController = new CookController(_timer, _display, _powerTube);
         }
 
+        #region PowerTube
 
         [Test]
         public void StartCooking_PowerTubeTurnsOn()
@@ -69,6 +70,31 @@ namespace Microwave.Test.Integration
             Assert.Throws<System.ArgumentOutOfRangeException>(() => _powerTube.TurnOn(powerPercent));
         }
 
+        [TestCase(100)]
+        [TestCase(50)]
+        public void StartCooking_OutputsPower(int powerPercent)
+        {
+            _cookController.StartCooking(powerPercent, 5);
+            _output.OutputLine(Arg.Is<string>(str => str.Contains($"{powerPercent} %")));
+        }
+
+        #endregion
+
+        [Test]
+        public void StartCooking_StartsTimer()
+        {
+            _cookController.StartCooking(50,50);
+            Assert.That(_timer.TIMER.Enabled, Is.EqualTo(true));
+        }
+
+        [Test]
+        public void StopCooking_StopsTimer()
+        {
+            _cookController.StartCooking(50, 50);
+            _cookController.Stop();
+            Assert.That(_timer.TIMER.Enabled, Is.EqualTo(false));
+        }
+
         [TestCase(50)]
         [TestCase(37)]
         public void StartCooking_OneSecondPasses(int sec)
@@ -76,14 +102,6 @@ namespace Microwave.Test.Integration
             _cookController.StartCooking(99, sec);
             Thread.Sleep(1000);
             _output.OutputLine(Arg.Is<string>(str => str.Contains($"00:{sec - 1}")));
-        }
-
-        [TestCase(100)]
-        [TestCase(50)]
-        public void StartCooking_OutputsPower(int powerPercent)
-        {
-            _cookController.StartCooking(powerPercent, 5);
-            _output.OutputLine(Arg.Is<string>(str => str.Contains($"{powerPercent} %")));
         }
 
     }
