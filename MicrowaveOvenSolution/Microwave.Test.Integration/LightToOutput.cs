@@ -23,7 +23,7 @@ namespace Microwave.Test.Integration
 
         }
 
-
+        [Test]
         public void TurnLightOn_OutputsOn()
         { 
             _light.TurnOn();
@@ -31,7 +31,7 @@ namespace Microwave.Test.Integration
 
         }
 
-
+        [Test]
         public void TurnLightOff_OutputsOff()
         {
             _light.TurnOff();
