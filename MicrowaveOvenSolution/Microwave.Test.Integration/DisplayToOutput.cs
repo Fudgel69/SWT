@@ -26,10 +26,10 @@ namespace Microwave.Test.Integration
         [TestCase(0, 5)]
         [TestCase(1, 5)]
         [TestCase(12, 33)]
-        public void ShowTime_DisplaysTime(int hr, int min)
+        public void ShowTime_DisplaysTime(int min, int sec)
         {
-            _display.ShowTime(hr, min);
-            _output.OutputLine(Arg.Is<string>(str => str.Contains($"{hr}:{min}")));
+            _display.ShowTime(min, sec);
+            _output.OutputLine(Arg.Is<string>(str => str.Contains($"{min}:{sec}")));
 
         }
 
