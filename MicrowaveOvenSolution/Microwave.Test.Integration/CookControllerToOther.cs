@@ -32,7 +32,6 @@ namespace Microwave.Test.Integration
             _cookController = new CookController(_timer, _display, _powerTube);
         }
 
-        #region Powertube
 
         [Test]
         public void StartCooking_PowerTubeTurnsOn()
@@ -57,9 +56,18 @@ namespace Microwave.Test.Integration
             Assert.That(_powerTube.ISON, Is.EqualTo(false));
         }
 
-        #endregion
+        [Test]
+        public void StartCooking_TooMuchPower_ThrowsException()
+        {
+            Assert.Throws<System.ArgumentOutOfRangeException>(() => _powerTube.TurnOn(101));
+        }
 
-        #region Display/Output
+        [TestCase(-1)]
+        [TestCase(0)]
+        public void StartCooking_ZeroOrUnderPower_ThreowsException(int powerPercent)
+        {
+            Assert.Throws<System.ArgumentOutOfRangeException>(() => _powerTube.TurnOn(powerPercent));
+        }
 
         [TestCase(50)]
         [TestCase(37)]
@@ -78,19 +86,5 @@ namespace Microwave.Test.Integration
             _output.OutputLine(Arg.Is<string>(str => str.Contains($"{powerPercent} %")));
         }
 
-        #endregion
-
-
-        #region Timer
-
-
-
-        #endregion
-
-        #region Output
-
-        
-
-        #endregion
     }
 }
