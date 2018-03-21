@@ -11,8 +11,8 @@ namespace Microwave.Test.Integration
     [TestFixture]
     public class PowerTubeToOutput
     {
-        private PowerTube _powertube;
-        private Output _output;
+        private IPowerTube _powertube;
+        private IOutput _output;
 
         [SetUp]
         public void Setup()
