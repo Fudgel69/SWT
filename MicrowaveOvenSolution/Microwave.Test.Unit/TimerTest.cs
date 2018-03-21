@@ -49,10 +49,10 @@ namespace Microwave.Test.Unit
             ManualResetEvent pause = new ManualResetEvent(false);
 
             uut.Expired += (sender, args) => pause.Set();
-            uut.Start(2000);
+            uut.Start(2);
 
             // wait for expiration, but not much longer, should come
-            Assert.That(pause.WaitOne(2100));
+            Assert.That(pause.WaitOne(3));
 
             uut.Stop();
         }
@@ -63,10 +63,10 @@ namespace Microwave.Test.Unit
             ManualResetEvent pause = new ManualResetEvent(false);
 
             uut.Expired += (sender, args) => pause.Set();
-            uut.Start(2000);
+            uut.Start(3);
 
             // wait shorter than expiration, shouldn't come
-            Assert.That(!pause.WaitOne(1900));
+            Assert.That(!pause.WaitOne(2));
 
             uut.Stop();
         }
@@ -83,7 +83,7 @@ namespace Microwave.Test.Unit
             uut.Start(2);
 
             // wait longer than expiration
-            Assert.That(pause.WaitOne(3));
+            Assert.That(pause.WaitOne(1));
             uut.Stop();
 
             Assert.That(notifications, Is.EqualTo(2));
