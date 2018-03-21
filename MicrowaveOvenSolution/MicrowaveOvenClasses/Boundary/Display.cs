@@ -23,7 +23,7 @@ namespace MicrowaveOvenClasses.Boundary
 
         public void Clear()
         {
-            myOutput.OutputLine($"Display cleared");
+            myOutput.OutputLine($"Display cleared nauw");
         }
     }
 }
