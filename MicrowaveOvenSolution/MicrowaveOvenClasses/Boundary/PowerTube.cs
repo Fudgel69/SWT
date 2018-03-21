@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using MicrowaveOvenClasses.Interfaces;
 
 namespace MicrowaveOvenClasses.Boundary
@@ -6,6 +7,11 @@ namespace MicrowaveOvenClasses.Boundary
     public class PowerTube : IPowerTube
     {
         private IOutput myOutput;
+
+        public bool ISON
+        {
+            get { return IsOn; }
+        }
 
         private bool IsOn = false;
 

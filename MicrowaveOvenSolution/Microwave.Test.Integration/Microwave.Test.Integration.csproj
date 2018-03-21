@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CookControllerToOther.cs" />
     <Compile Include="DisplayToOutput.cs" />
     <Compile Include="LightToOutput.cs" />
     <Compile Include="PowerTubeToOutput.cs" />

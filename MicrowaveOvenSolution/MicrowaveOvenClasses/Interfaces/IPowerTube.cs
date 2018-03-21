@@ -9,7 +9,7 @@ namespace MicrowaveOvenClasses.Interfaces
     public interface IPowerTube
     {
         void TurnOn(int power);
-
+        bool ISON { get; }
         void TurnOff();
     }
 }
