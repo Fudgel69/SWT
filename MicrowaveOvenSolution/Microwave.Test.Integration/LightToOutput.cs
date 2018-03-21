@@ -27,7 +27,7 @@ namespace Microwave.Test.Integration
         public void TurnLightOn_OutputsOn()
         { 
             _light.TurnOn();
-            _output.Received(1).OutputLine(Arg.Is<string>(str => str.Contains("on")));
+            _output.OutputLine(Arg.Is<string>(str => str.Contains("on")));
 
         }
 
@@ -35,7 +35,7 @@ namespace Microwave.Test.Integration
         public void TurnLightOff_OutputsOff()
         {
             _light.TurnOff();
-            _output.Received(1).OutputLine(Arg.Is<string>(str => str.Contains("off")));
+            _output.OutputLine(Arg.Is<string>(str => str.Contains("off")));
 
         }
 
