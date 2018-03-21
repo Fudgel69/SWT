@@ -5,6 +5,7 @@ using MicrowaveOvenClasses.Boundary;
 using MicrowaveOvenClasses.Controllers;
 using MicrowaveOvenClasses.Interfaces;
 using NSubstitute;
+using NSubstitute.Core;
 using NUnit.Framework;
 using Timer = MicrowaveOvenClasses.Boundary.Timer;
 
@@ -36,7 +37,7 @@ namespace Microwave.Test.Integration
         {
             _cookController.StartCooking(99, 5);
             Thread.Sleep(1);
-            Assert.That(_powerTube.ISON.Equals(true));
+            Assert.That(_powerTube.ISON, Is.EqualTo(true));
         }
 
         [Test]
@@ -44,7 +45,7 @@ namespace Microwave.Test.Integration
         {
             _cookController.StartCooking(99, 5);
             Thread.Sleep(5);
-            Assert.That(_powerTube.ISON.Equals(false));
+            Assert.That(_powerTube.ISON, Is.EqualTo(false));
         }
 
     }
