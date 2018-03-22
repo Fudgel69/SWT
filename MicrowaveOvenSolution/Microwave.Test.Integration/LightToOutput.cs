@@ -26,9 +26,9 @@ namespace Microwave.Test.Integration
         //Tændes lyset vil output bestå af "on"
         [Test]
         public void TurnLightOn_OutputsOn()
-        { 
+        {
             _light.TurnOn();
-            _output.OutputLine(Arg.Is<string>(str => str.Contains("on")));
+            Assert.That(_light.LightISON, Is.EqualTo(true));
 
         }
 
@@ -37,9 +37,7 @@ namespace Microwave.Test.Integration
         public void TurnLightOff_OutputsOff()
         {
             _light.TurnOff();
-            _output.OutputLine(Arg.Is<string>(str => str.Contains("off")));
-
+            Assert.That(_light.LightISON, Is.EqualTo(false));
         }
-
     }
 }
