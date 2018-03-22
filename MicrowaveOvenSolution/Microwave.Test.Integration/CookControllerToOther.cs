@@ -34,6 +34,7 @@ namespace Microwave.Test.Integration
 
         #region PowerTube
 
+        //StartCooking tænder for PowerTube
         [Test]
         public void StartCooking_PowerTubeTurnsOn()
         {
@@ -41,6 +42,7 @@ namespace Microwave.Test.Integration
             Assert.That(_powerTube.ISON, Is.EqualTo(true));
         }
 
+        //stop slukker for PowerTube
         [Test]
         public void StartCookingStopCooking_PowerTuberTurnsOff()
         {
@@ -49,6 +51,7 @@ namespace Microwave.Test.Integration
             Assert.That(_powerTube.ISON, Is.EqualTo(false));
         }
 
+        //Efter StartCooking har kørt i 5 sekunder vil PowerTube blive slukket
         [Test]
         public void StartCookingFiveSeconds_PowerTubeTurnsOff()
         {
@@ -57,23 +60,26 @@ namespace Microwave.Test.Integration
             Assert.That(_powerTube.ISON, Is.EqualTo(false));
         }
 
+        //Køres StartCooking med over 100% vil der smides en exception
         [Test]
         public void StartCooking_TooMuchPower_ThrowsException()
         {
-            Assert.Throws<System.ArgumentOutOfRangeException>(() => _powerTube.TurnOn(101));
+            Assert.Throws<System.ArgumentOutOfRangeException>(() => _cookController.StartCooking(101, 5));
         }
 
+        //Køres StartCooking med 0% eller mindre vil en exception blive smidt
         [TestCase(-1)]
         [TestCase(0)]
         public void StartCooking_ZeroOrUnderPower_ThreowsException(int powerPercent)
         {
-            Assert.Throws<System.ArgumentOutOfRangeException>(() => _powerTube.TurnOn(powerPercent));
+            Assert.Throws<System.ArgumentOutOfRangeException>(() => _cookController.StartCooking(powerPercent, 5));
         }
 
         #endregion
 
         #region Timer
 
+        //StartCooking starter en timer
         [Test]
         public void StartCooking_StartsTimer()
         {
@@ -81,6 +87,7 @@ namespace Microwave.Test.Integration
             Assert.That(_timer.TIMER.Enabled, Is.EqualTo(true));
         }
 
+        //stop stopper timeren
         [Test]
         public void StopCooking_StopsTimer()
         {
@@ -93,7 +100,7 @@ namespace Microwave.Test.Integration
 
         #endregion
 
-
+        //Efter et sekund, vil et sekund mindre en forrige blive vist som output
         [TestCase(50)]
         [TestCase(37)]
         public void StartCooking_OneSecondPasses_DisplaySecondLess(int sec)
@@ -105,6 +112,8 @@ namespace Microwave.Test.Integration
 
         #region Display
 
+
+        //StartCooking outputter wattprocenten
         [TestCase(100)]
         [TestCase(50)]
         public void StartCooking_OutputsPower(int powerPercent)

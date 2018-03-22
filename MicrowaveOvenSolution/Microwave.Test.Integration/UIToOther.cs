@@ -39,6 +39,9 @@ namespace Microwave.Test.Integration
         [SetUp]
         public void SetUp()
         {
+
+            _output = new Output();
+
             //Button
             _powerButton = new Button();
             _timeButton = new Button();
@@ -49,7 +52,6 @@ namespace Microwave.Test.Integration
             _timer = new Timer();
 
             //Userinterface
-            _output = new Output();
             _door = new Door();
             _display = new Display(_output);
             _light = new Light(_output);
@@ -96,7 +98,9 @@ namespace Microwave.Test.Integration
         [Test]
         public void Cooking_StopCookingCancelButtonIsPressed()
         {
-            _cooker.StartCooking(50, 5);
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
             _startCancelButton.Press();
             Assert.That(_powerTube.ISON, Is.EqualTo(false));
 
@@ -113,7 +117,9 @@ namespace Microwave.Test.Integration
         [Test]
         public void Cooking_StopCookingDoorIsOpened()
         {
-            _cooker.StartCooking(50, 5);
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
             _door.Open();
             Assert.That(_powerTube.ISON, Is.EqualTo(false));
         }

@@ -23,6 +23,7 @@ namespace Microwave.Test.Integration
 
         }
 
+        //Sendes minut- og sekund værdier, vil disse blive vist
         [TestCase(0, 5)]
         [TestCase(1, 5)]
         [TestCase(12, 33)]
@@ -33,14 +34,16 @@ namespace Microwave.Test.Integration
 
         }
 
+        //Sendes watt-værdier vil disse blive vist
         [TestCase(500)]
-        [TestCase(1000)]
+        [TestCase(650)]
         public void ShowPower_DisplaysPower(int watt)
         {
             _display.ShowPower(watt);
             _output.OutputLine(Arg.Is<string>(str => str.Contains($"{watt} W")));
         }
 
+        //Clear vil vise en besked bestående af "cleared"
         [Test]
         public void Clear_ClearsDisplay()
         {

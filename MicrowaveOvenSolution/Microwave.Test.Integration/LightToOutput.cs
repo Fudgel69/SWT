@@ -23,6 +23,7 @@ namespace Microwave.Test.Integration
 
         }
 
+        //Tændes lyset vil output bestå af "on"
         [Test]
         public void TurnLightOn_OutputsOn()
         { 
@@ -31,6 +32,7 @@ namespace Microwave.Test.Integration
 
         }
 
+        //Slukkes lyset vil output bestå af "off"
         [Test]
         public void TurnLightOff_OutputsOff()
         {
