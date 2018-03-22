@@ -91,11 +91,33 @@ namespace Microwave.Test.Integration
             Assert.That(_powerTube.ISON, Is.EqualTo(true));    
         }
 
+        //StartCancelButton
+        //tænd for program, tryk på cancel, og se om programmet stopper
+        [Test]
+        public void Cooking_StopCookingCancelButtonIsPressed()
+        {
+            _cooker.StartCooking(50, 5);
+            _startCancelButton.Press();
+            Assert.That(_powerTube.ISON, Is.EqualTo(false));
+
+        }
+
         #endregion
 
 
 
+        #region Door
+        
+        //Door
+        //tænd program, åben dør, og se om programmet stopper
+        [Test]
+        public void Cooking_StopCookingDoorIsOpened()
+        {
+            _cooker.StartCooking(50, 5);
+            _door.Open();
+            Assert.That(_powerTube.ISON, Is.EqualTo(false));
+        }
 
-
+        #endregion
     }
 }
