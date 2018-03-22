@@ -84,7 +84,8 @@ namespace Microwave.Test.Integration
         public void StartCooking_StartsTimer()
         {
             _cookController.StartCooking(50,50);
-            Assert.That(_timer.TIMER.Enabled, Is.EqualTo(true));
+            bool timerBool = _timer.TIMER.Enabled;
+            Assert.That(timerBool, Is.EqualTo(true));
         }
 
         [Test]
@@ -103,6 +104,7 @@ namespace Microwave.Test.Integration
             Thread.Sleep(1000);
             _output.OutputLine(Arg.Is<string>(str => str.Contains($"00:{sec - 1}")));
         }
+
 
     }
 }
