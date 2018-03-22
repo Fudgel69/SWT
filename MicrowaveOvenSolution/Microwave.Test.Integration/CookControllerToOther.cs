@@ -78,7 +78,7 @@ namespace Microwave.Test.Integration
         public void StartCooking_StartsTimer()
         {
             _cookController.StartCooking(50, 50);
-            Assert.That(_timer.TIMER.Enabled, Is.EqualTo(false));
+            Assert.That(_timer.TIMER.Enabled, Is.EqualTo(true));
         }
 
         [Test]
